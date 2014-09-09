@@ -1,0 +1,43 @@
+Este sistema tem por objetivo realizar cálculos de entregas visando sempre o menor custo. O usuário deve realizar a requisição em formato de malha logística. O formato de malha logística é bastante simples, cada linha mostra uma rota: ponto de origem, ponto de destino e distância entre os pontos em quilômetros.
+Com os mapas carregados o requisitante irá procurar o menor valor de entrega e seu caminho, para isso ele passará o nome do ponto de origem, nome do ponto de destino, autonomia do caminhão (km/l) e o valor do litro do combustivel.
+
+API Requests:
+
+=> creating maps and routes
+   url: http://localhost:3000/maps
+   method: Post
+   Body : {
+    "name": "",
+    "routes": [ {
+            "origin": "",
+            "destination": "",
+            "distance": ""
+        }]}
+
+
+=> listing maps
+   url: http://localhost:3000/maps
+   method: GET
+   body : not needed
+
+=> listing routes
+   url: http://localhost:3000/routes
+   method: POST
+   body : { "map_id": "" }
+
+=> method shortest
+   url: http://localhost:3000/routes/shortest
+   method: POST
+   body : { 
+	"map_name": "",
+    	"src": "",
+    	"dst": "",
+    	"autonomy": "",
+    	"fuel_price": ""
+	}
+
+
+
+
+
+

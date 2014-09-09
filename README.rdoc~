@@ -1,0 +1,40 @@
+API Requests:
+
+=> creating maps and routes
+   url: http://localhost:3000/maps
+   method: Post
+   Body : {
+    "name": "",
+    "routes": [ {
+            "origin": "",
+            "destination": "",
+            "distance": ""
+        }]}
+
+
+=> listing maps
+   url: http://localhost:3000/maps
+   method: GET
+   body : not needed
+
+=> listing routes
+   url: http://localhost:3000/routes
+   method: POST
+   body : { "map_id": "" }
+
+=> method shortest
+   url: http://localhost:3000/routes/shortest
+   method: POST
+   body : { 
+	"map_name": "",
+    	"src": "",
+    	"dst": "",
+    	"autonomy": "",
+    	"fuel_price": ""
+	}
+
+
+
+
+
+
